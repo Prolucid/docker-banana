@@ -5,7 +5,7 @@ ENV DEBIAN_FRONTEND noninteractive
 # Use baseimage-docker's init system.
 CMD ["/sbin/my_init"]
 
-RUN sudo apt-get update && apt-get install -y wget nodejs-legacy npm
+RUN apt-get update && apt-get install -y wget nodejs-legacy npm
 
 WORKDIR /app
 
