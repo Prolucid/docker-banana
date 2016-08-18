@@ -5,8 +5,8 @@ ENV DEBIAN_FRONTEND noninteractive
 # Use baseimage-docker's init system.
 CMD ["/sbin/my_init"]
 
-RUN apt-get update && apt-get install -y wget nodejs-legacy npm
-
+RUN apt-get update && apt-get install -y wget nodejs npm
+RUN sudo ln -s `which nodejs` /usr/bin/node
 WORKDIR /app
 
 ENV BANNANA_VERSION 1.6.0
